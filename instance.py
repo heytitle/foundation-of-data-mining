@@ -1,7 +1,7 @@
 import math
 
 class Instance:
-    def __init__( self, features, label_array=[0]*9, label=None ):
+    def __init__( self, features, label_array=[0]*9, label=None, predicted_label=None ):
         self.features = features
 
 
@@ -17,3 +17,6 @@ class Instance:
                     break
         else:
             self.label = label
+
+        if( predicted_label != None ):
+            self.predicted_label = predicted_label
